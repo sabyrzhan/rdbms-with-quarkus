@@ -1,4 +1,6 @@
-package kz.sabyrzhan.rdbmsquarkus.panache;
+package kz.sabyrzhan.rdbmsquarkus.panache.repository;
+
+import kz.sabyrzhan.rdbmsquarkus.panache.model.Publisher;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.transaction.Transactional;

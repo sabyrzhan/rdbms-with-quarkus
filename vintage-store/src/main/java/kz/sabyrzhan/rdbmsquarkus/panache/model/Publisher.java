@@ -1,4 +1,4 @@
-package kz.sabyrzhan.rdbmsquarkus.panache;
+package kz.sabyrzhan.rdbmsquarkus.panache.model;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.AllArgsConstructor;

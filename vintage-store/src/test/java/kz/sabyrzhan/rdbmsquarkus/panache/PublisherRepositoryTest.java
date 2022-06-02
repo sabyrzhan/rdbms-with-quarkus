@@ -2,6 +2,7 @@ package kz.sabyrzhan.rdbmsquarkus.panache;
 
 import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
+import kz.sabyrzhan.rdbmsquarkus.panache.model.Publisher;
 import org.junit.jupiter.api.Test;
 
 import java.time.Instant;
