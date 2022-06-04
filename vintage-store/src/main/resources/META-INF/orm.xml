@@ -7,6 +7,9 @@
             <id name="id">
                 <generated-value strategy="IDENTITY"/>
             </id>
+            <basic name="createdDate">
+                <column name="created_date" nullable="false"/>
+            </basic>
         </attributes>
     </entity>
     <entity class="kz.sabyrzhan.rdbmsquarkus.jpa.Customer"/>
