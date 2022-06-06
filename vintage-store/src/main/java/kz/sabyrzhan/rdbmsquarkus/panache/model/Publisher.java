@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import java.time.Instant;
 
 @Entity
-@Table(name = "publishers")
+@Table(name = "t_publishers")
 @Builder
 @AllArgsConstructor
 @RequiredArgsConstructor
