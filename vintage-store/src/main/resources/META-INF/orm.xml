@@ -7,6 +7,9 @@
             <id name="id">
                 <generated-value strategy="IDENTITY"/>
             </id>
+            <basic name="bio">
+                <column column-definition="text" name="bio" nullable="false" />
+            </basic>
             <basic name="createdDate">
                 <column name="created_date" nullable="false"/>
             </basic>

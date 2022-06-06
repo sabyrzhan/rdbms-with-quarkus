@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.Instant;
 
 @Entity
 @Table(name = "t_order_lines")
@@ -25,4 +26,7 @@ public class OrderLine extends PanacheEntity {
     @ManyToOne
     @JoinColumn(name = "purchase_order_id")
     private PurchaseOrder purchaseOrder;
+
+    @Column
+    private Instant createdDate = Instant.now();
 }

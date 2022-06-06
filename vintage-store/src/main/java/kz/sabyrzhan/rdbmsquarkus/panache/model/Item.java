@@ -12,15 +12,16 @@ import java.time.Instant;
 @Entity
 @Getter
 @Setter
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
-public abstract class Item extends PanacheEntityBuilderEnabler {
+@Table(name = "t_items")
+public class Item extends PanacheEntityBuilderEnabler {
     @Column
     private String title;
 
-    @Column
+    @Column(columnDefinition = "text")
     private String description;
 
     @Column

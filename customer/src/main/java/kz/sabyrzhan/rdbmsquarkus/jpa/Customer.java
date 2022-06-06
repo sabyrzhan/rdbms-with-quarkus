@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.time.Instant;
 
 @Entity
-@Table(name = "customers")
+@Table(name = "t_customers")
 @Data
 @Builder
 @AllArgsConstructor
