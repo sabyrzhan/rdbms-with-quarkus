@@ -29,6 +29,7 @@ class CustomerRepositoryTest {
         assertNotNull(customer.getId());
 
         var expected = customerRepository.findById(customer.getId());
+        assertEquals(1, customerRepository.findAllByFirstName("TestName").size());
         assertEquals("TestName", expected.getFirstName());
         assertEquals("TestLastname", expected.getLastName());
         assertEquals("test@test.com", expected.getEmail());
