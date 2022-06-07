@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>All books</title>
+</head>
+<body>
+<table border="1">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>ISBN</th>
+        <th>No. of pages</th>
+        <th>Price</th>
+        <th>Language</th>
+    </tr>
+    </thead>
+    <tbody>
+    {#for book in books}
+        <tr>
+        <td>{book.id}</td>
+        <td>{book.title}</td>
+        <td>{book.isbn}</td>
+        <td>{book.numberOfPages}</td>
+        <td>{book.price}</td>
+        <td>{book.language}</td>
+        </tr>
+    {/for}
+    </tbody>
+</table>
+</body>
+</html>
