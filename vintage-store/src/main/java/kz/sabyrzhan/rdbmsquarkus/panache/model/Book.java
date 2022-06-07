@@ -1,6 +1,9 @@
 package kz.sabyrzhan.rdbmsquarkus.panache.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
@@ -9,7 +12,6 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @Setter
-@Table(name = "t_books")
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder

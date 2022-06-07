@@ -1,0 +1,35 @@
+### Find all artists
+GET http://localhost:8080/api/artists
+
+### Find artist by ID
+GET http://localhost:8080/api/artists/103
+
+### Delete artist by ID
+DELETE http://localhost:8080/api/artists/103
+
+### Add artist
+POST http://localhost:8080/api/artists
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Testartist",
+  "bio": "test bio"
+}
+
+### Find all publishers
+GET http://localhost:8080/api/publishers
+
+### Find publisher by ID
+GET http://localhost:8080/api/publishers/602
+
+### Add publisher
+POST http://localhost:8080/api/publishers
+Content-Type: application/json
+
+{
+  "name": "Some publisher"
+}
+
+### Delete publisher
+DELETE http://localhost:8080/api/publishers/603
