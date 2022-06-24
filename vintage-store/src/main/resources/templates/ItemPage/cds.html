@@ -1,31 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>All cds</title>
-</head>
-<body>
-<table border="1">
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>Title</th>
-        <th>Music company</th>
-        <th>Genre</th>
-        <th>No. of tracks</th>
-    </tr>
-    </thead>
-    <tbody>
-    {#for cd in cds}
-        <tr>
-        <td>{cd.id}</td>
-        <td>{cd.title}</td>
-        <td>{cd.musicCompany}</td>
-        <td>{cd.genre}</td>
-        <td>{cd.tracks.size()}</td>
-        </tr>
-    {/for}
-    </tbody>
-</table>
-</body>
-</html>
+{#include base.html}
+    {#title}All CDs{/title}
+    {#body}
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Music company</th>
+                <th scope="col">Genre</th>
+                <th scope="col">No. of tracks</th>
+            </tr>
+            </thead>
+            <tbody>
+            {#for cd in cds}
+                <tr>
+                <td>{cd.id}</td>
+                <td>{cd.title}</td>
+                <td>{cd.musicCompany}</td>
+                <td>{cd.genre}</td>
+                <td>{cd.tracks.size()}</td>
+                </tr>
+            {/for}
+            </tbody>
+        </table>
+    {/body}
+{/include}

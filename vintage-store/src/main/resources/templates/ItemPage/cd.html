@@ -1,34 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>CD {cd.id}</title>
-</head>
-<body>
-<p>ID: {cd.id}</p>
-<p>Title: {cd.title}</p>
-<p>Description: {cd.description}</p>
-<p>Price: {cd.price}</p>
-<p>Music company: {cd.musicCompany}</p>
-<p>Genre: {cd.genre}</p>
-<p>Tracks:</p>
-<table border="1">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Title</th>
-            <th>Duration</th>
-        </tr>
-    </thead>
-    <tbody>
-        {#for cd in cd.tracks}
-            <tr>
-                <td>{cd.id}</td>
-                <td>{cd.title}</td>
-                <td>{cd.duration}</td>
-            </tr>
-        {/for}
-    </tbody>
-</table>
-</body>
-</html>
+{#include base.html}
+    {#title}CD {cd.id}{/title}
+    {#body}
+        <p>ID: {cd.id}</p>
+        <p>Title: {cd.title}</p>
+        <p>Description: {cd.description}</p>
+        <p>Price: {cd.price}</p>
+        <p>Music company: {cd.musicCompany}</p>
+        <p>Genre: {cd.genre}</p>
+        <p>Tracks:</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                {#for cd in cd.tracks}
+                    <tr>
+                        <td>{cd.id}</td>
+                        <td>{cd.title}</td>
+                        <td>{cd.duration}</td>
+                    </tr>
+                {/for}
+            </tbody>
+        </table>
+    {/body}
+{/include}
