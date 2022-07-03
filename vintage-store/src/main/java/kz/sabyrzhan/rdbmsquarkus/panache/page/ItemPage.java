@@ -1,14 +1,12 @@
 package kz.sabyrzhan.rdbmsquarkus.panache.page;
 
+import io.quarkus.panache.common.Sort;
 import io.quarkus.qute.CheckedTemplate;
 import io.quarkus.qute.TemplateInstance;
 import kz.sabyrzhan.rdbmsquarkus.panache.model.Book;
 import kz.sabyrzhan.rdbmsquarkus.panache.model.CD;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -31,8 +29,9 @@ public class ItemPage {
 
     @GET
     @Path("/books")
-    public TemplateInstance showAllBooks() {
-        return Templates.books(Book.listAll());
+    public TemplateInstance showAllBooks(@QueryParam("page") @DefaultValue("1") int page,
+                                         @QueryParam("sort") @DefaultValue("id") String sort) {
+        return Templates.books(Book.findAll(Sort.by(sort)).page(page - 1, 10).list());
     }
 
     @GET
@@ -43,7 +42,8 @@ public class ItemPage {
 
     @GET
     @Path("/cds")
-    public TemplateInstance showAllCDs() {
-        return Templates.cds(CD.listAll());
+    public TemplateInstance showAllCDs(@QueryParam("page") @DefaultValue("1") int page,
+                                       @QueryParam("sort") @DefaultValue("id") String sort) {
+        return Templates.cds(CD.findAll(Sort.by(sort)).page(page - 1, 10).list());
     }
 }

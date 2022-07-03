@@ -1,3 +1,5 @@
+.env
+
 ### JavaProjectGitIgnore template
 ### Maven template
 target/

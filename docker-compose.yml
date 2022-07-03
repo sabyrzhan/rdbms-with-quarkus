@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    env_file:
+      - .env
+    image: postgres:14
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: vintage_store
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSGRES_USER: ${DB_USER}
